@@ -1,0 +1,16 @@
+.flex-container{
+    background-color: beige;
+      width: 90%;
+      height: 8rem;
+      border-radius: 2rem;
+      margin-left: 1rem; 
+      padding-left: 2rem;
+      padding-top: 1rem;
+      color: black;
+   }
+   .textpos{
+     text-align: left;
+   }
+    h3{
+      font-size: bolt;
+    }

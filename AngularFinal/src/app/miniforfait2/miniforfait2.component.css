@@ -1,0 +1,16 @@
+.flex-container{
+    width: 16rem;
+    height: 10rem;
+    background-image: url(../imagedoc/image1.jpg);
+    border-radius: 2rem;
+    margin-left: 24rem; 
+    padding-left: 2.5rem;
+    padding-top: 1rem;
+    margin-top: -12rem;
+    color: yellow;
+}
+  .text{
+    color: red;
+    font-size: 1rem;
+  }
+  

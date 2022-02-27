@@ -1,0 +1,13 @@
+<div class="flex-container">
+     <div *ngFor="let forfait of forfaits" >    
+        <div *ngIf="forfait.destination == 'Toronto'">
+             Destination:   {{forfait.destination}}<br>
+             Ville Depart:  {{forfait.villeDepart}}<br>
+             Nom Hotel:    {{forfait.hotel.nomHotel}}<br>
+             Nombre Etoiles:  {{forfait.hotel.nombreEtoiles}}<br>
+             Prix:     {{forfait.prix}}<br>
+             Date depart:  {{forfait.dateDepart}}<br> 
+             Date Retour:  {{forfait.dateRetour}}<br>
+        </div>
+     </div>    
+</div>

@@ -1,0 +1,23 @@
+.flex-container{
+      width: 80%;
+      height: 100%;
+      border-radius: 2rem;
+      margin-left: 1rem; 
+      padding-left: 2rem;
+      padding-top: 1rem;
+      color: black;
+   }
+   .textpos{
+     text-align: left;
+   }
+    h3{
+      font-size: bolt;
+    }
+    h1{
+      color:blue;
+      text-align: center;
+    }
+    .bg{
+      background-image: url(../imagedoc/image2.jpg);
+      background-repeat: no-repeat;
+    }

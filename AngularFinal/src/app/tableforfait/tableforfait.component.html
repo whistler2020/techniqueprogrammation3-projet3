@@ -1,0 +1,84 @@
+
+
+<button (click)="onSelect(undefined)" ><i class="material-icons">add</i></button>
+
+<app-formulaireforfait (majTableau)="getForfaits()"></app-formulaireforfait>
+<table mat-table #tableForfaits [dataSource]="forfaits">
+
+    <ng-container matColumnDef="destination">
+        <th header-cell *matHeaderCellDef> Destination </th>
+        <td mat-cell *matCellDef="let forfait"> {{forfait.Destination}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="villeDepart">
+        <th mat-header-cell *matHeaderCellDef>Ville de Depart </th>
+        <td mat-cell *matCellDef="let forfait"> {{forfait.villeDepart}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="nomHotel">
+        <th mat-header-cell *matHeaderCellDef>Nom Hotel </th>
+        <td mat-cell *matCellDef="let forfait"> {{forfait.hotel.nomHotel}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="coordonneesHotel">
+        <th mat-header-cell *matHeaderCellDef>coordonneesHotel </th>
+        <td mat-cell *matCellDef="let forfait"> {{forfait.hotel.coordonneesHotel}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="nombreEtoiles">
+        <th mat-header-cell *matHeaderCellDef>Nombre Etoiles </th>
+        <td mat-cell *matCellDef="let forfait"> {{forfait.hotel.nombreEtoiles}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="nombreChambres">
+        <th mat-header-cell *matHeaderCellDef>Nombre de chambres </th>
+        <td mat-cell *matCellDef="let forfait"> {{forfait.hotel.nombreChambres}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="caracteristiques">
+        <th mat-header-cell *matHeaderCellDef>caracteristiques </th>
+        <td mat-cell *matCellDef="let forfait"> {{forfait.hotel.caracteristiques}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="dateDepart">
+        <th mat-header-cell *matHeaderCellDef>date Depart </th>
+        <td mat-cell *matCellDef="let forfait"> {{forfait.dateDepart}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="dateRetour">
+        <th mat-header-cell *matHeaderCellDef>date retour </th>
+        <td mat-cell *matCellDef="let forfait"> {{forfait.dateRetour}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="prix">
+        <th mat-header-cell *matHeaderCellDef> Prix </th>
+        <td mat-cell *matCellDef="let forfait"> {{forfait.prix}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="rabais">
+        <th mat-header-cell *matHeaderCellDef> Rabais </th>
+        <td mat-cell *matCellDef="let forfait"> {{forfait.rabais}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="vedette">
+        <th mat-header-cell *matHeaderCellDef> vedette </th>
+        <td mat-cell *matCellDef="let forfait"> {{forfait.vedette}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> </th>
+        <td mat-cell *matCellDef="let forfait" class="boutonsAction">
+            <button (click)="onSelect(forfait)" mat-button><i class="material-icons">Editer</i></button>
+            <button (click)="onDelete(forfait)" mat-button><i class="material-icons">delete</i></button>
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+    <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
+    <app-formulaireforfait (majTableau)="getForfaits()"></app-formulaireforfait>
+</table>
+
+<ng-template *ngIf="selectedForfait">
+    <app-formulaireforfait [forfait]="selectedForfait"></app-formulaireforfait>
+</ng-template>
+

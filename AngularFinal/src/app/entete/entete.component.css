@@ -1,0 +1,41 @@
+:host {
+    display:block;
+    background-color:red;
+    color: white;
+    height: 3rem;
+}
+.dispolink1{
+    margin-left:18rem;
+    color: white;
+    text-decoration-line: none;
+}
+
+.dispolink2{
+    margin-left: 2rem;
+    color: white;
+    text-emphasis: 15px;
+    text-decoration-line: none;
+} 
+.dispolink3{
+    margin-left:2rem;
+    color: white;
+    text-decoration-line: none;
+}
+
+.dispolink4{
+    margin-left:2rem;
+    color: white;
+    text-decoration-line: none;
+}
+
+.dispolink5{
+    margin-left: 2rem;
+    color: white;
+    text-emphasis: 10px;
+    text-decoration-line: none;
+    background-color: blue;
+}
+h2{
+    font-size:5rem;
+    color: blue;
+}

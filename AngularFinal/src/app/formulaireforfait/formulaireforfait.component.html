@@ -1,0 +1,88 @@
+ <form #forfaitForm="ngForm">
+    <mat-form-field appearance="fill" class="half-width">
+        <label>Destination</label>
+        <input name="destination" [(ngModel)]="forfait.destination" #destination="ngModel" matInput required minlength="2" maxlength="50"  placeholder="Ex. Destination">
+        <mat-error *ngIf="destination.invalid && (destination.dirty || destination.touched) && destination.hasError('required')">La destination est obligatoire.</mat-error>
+        <mat-error *ngIf="destination.invalid && (destination.dirty || destination.touched) && destination.hasError('minlength')">La destination doit contenir au moins 2 caractères.</mat-error>
+        <mat-error *ngIf="destination.invalid && (destination.dirty || destination.touched) && destination.hasError('maxlength')">La destination doit contenir un maximum de 50 caractères.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="half-width">
+        <label>Ville Depart</label>
+        <input name="villeDepart" [(ngModel)]="forfait.villeDepart" #villeDepart="ngModel" matInput required minlength="2" maxlength="50"  placeholder="Ex. Ville Depart">
+        <mat-error *ngIf="villeDepart.invalid && (villeDepart.dirty || villeDepart.touched) && villeDepart.hasError('required')">Le nom est obligatoire.</mat-error>
+        <mat-error *ngIf="villeDepart.invalid && (villeDepart.dirty || villeDepart.touched) && villeDepart.hasError('minlength')">La ville de depart doit contenir au moins 2 caractères.</mat-error>
+        <mat-error *ngIf="villeDepart.invalid && (villeDepart.dirty || villeDepart.touched) && villeDepart.hasError('maxlength')">La ville de depart doit contenir au maximum 50 caractères.</mat-error>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill" class="half-width">
+        <label>Nom Hotel</label>
+        <input name="nomHotel" [(ngModel)]="forfait.hotel.nomHotel" #nomHotel="ngModel" matInput required minlength="2" maxlength="50"  placeholder="Ex. Nom Hotel">
+        <mat-error *ngIf="nomHotel.invalid && (nomHotel.dirty || nomHotel.touched) && nomHotel.hasError('minlength')">Le nom doit contenir au moins 2 caractères.</mat-error>
+        <mat-error *ngIf="nomHotel.invalid && (nomHotel.dirty || nomHotel.touched) && nomHotel.hasError('maxlength')">Le nom doit contenir au maximum 50 caractères.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="half-width">
+        <label>Coord. Hotel</label>
+        <input name="coordonneesHotel" [(ngModel)]="forfait.hotel.coordonneesHotel" #coordonneesHotel="ngModel" matInput required minlength="2" maxlength="50"  placeholder="Ex. 999-999-9999">
+        <mat-error *ngIf="coordonneesHotel.invalid && (coordonneesHotel.dirty || coordonneesHotel.touched) && coordonneesHotel.hasError('required')">Les coordonnees sont obligatoires.</mat-error>
+        <mat-error *ngIf="coordonneesHotel.invalid && (coordonneesHotel.dirty || coordonneesHotel.touched) && coordonneesHotel.hasError('minlength')">Le nom doit contenir au moins 2 caractères.</mat-error>
+        <mat-error *ngIf="coordonneesHotel.invalid && (coordonneesHotel.dirty || coordonneesHotel.touched) && coordonneesHotel.hasError('maxlength')">Le nom doit contenir au maximum 15 caractères.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="half-width">
+        <label>Nb Etoiles</label>
+        <input name="nombreEtoiles" [(ngModel)]="forfait.hotel.nombreEtoiles" #nombreEtoiles="ngModel" matInput required minlength="2" maxlength="5"  placeholder="Ex. 99999">
+        <mat-error *ngIf="nombreEtoiles.invalid && (nombreEtoiles.dirty || nombreEtoiles.touched) && nombreEtoiles.hasError('required')">Le nom est obligatoire.</mat-error>
+        <mat-error *ngIf="nombreEtoiles.invalid && (nombreEtoiles.dirty || nombreEtoiles.touched) && nombreEtoiles.hasError('minlength')">Le nom doit contenir au moins 2 caractères.</mat-error>
+        <mat-error *ngIf="nombreEtoiles.invalid && (nombreEtoiles.dirty || nombreEtoiles.touched) && nombreEtoiles.hasError('maxlength')">Le nom doit contenir au maximum 5 caractères.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="half-width">
+        <label>Nb de Chambres</label>
+        <input name="nombreChambres" [(ngModel)]="forfait.hotel.nombreChambres" #nombreChambres="ngModel" required type="number" matInput placeholder="Ex. nombre">
+        <mat-error *ngIf="nombreChambres.invalid && (nombreChambres.dirty || nombreChambres.touched) && nombreChambres.hasError('required')">Le nom est obligatoire.</mat-error>
+        <mat-error *ngIf="nombreChambres.invalid && (nombreChambres.dirty || nombreChambres.touched) && nombreChambres.hasError('minlength')">Le nom doit contenir au moins 2 caractères.</mat-error>
+        <mat-error *ngIf="nombreChambres.invalid && (nombreChambres.dirty || nombreChambres.touched) && nombreChambres.hasError('maxlength')">Le nom doit contenir au maximum 50 caractères.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="half-width">
+        <label>Caracteristiques</label>
+        <input name="Caracteristiques" [(ngModel)]="forfait.hotel.caracteristiques" #caracteristiques="ngModel" matInput required minlength="2" maxlength="50"  placeholder="Ex. caracteristiques">
+        <mat-error *ngIf="caracteristiques.invalid && (caracteristiques.dirty || caracteristiques.touched) && caracteristiques.hasError('required')">Les caracteristiques sont obligatoires.</mat-error>
+        <mat-error *ngIf="caracteristiques.invalid && (caracteristiques.dirty || caracteristiques.touched) && caracteristiques.hasError('minlength')">Les caracteristiques doivent contenir au moins 2 caractères.</mat-error>
+        <mat-error *ngIf="caracteristiques.invalid && (caracteristiques.dirty || caracteristiques.touched) && caracteristiques.hasError('maxlength')">Les caracteristiques doivent contenir au maximum 50 caractères.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="half-width">
+        <label>Date Depart</label>
+        <input name="dateDepart" [(ngModel)]="forfait.dateDepart" #dateDepart="ngModel" matInput required minlength="2" maxlength="50"  placeholder="aaaa-mm-jj" pattern="[aaaa-mm-jj]">
+        <mat-error *ngIf="dateDepart.invalid && (dateDepart.dirty || dateDepart.touched) && dateDepart.hasError('required')">la Date depart est obligatoire.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="half-width">
+        <label>Date Retour</label>
+        <input name="dateRetour" [(ngModel)]="forfait.dateRetour" #dateRetour="ngModel" matInput required minlength="2" maxlength="15"  placeholder="aaaa-mm-jj" pattern="[aaaa-mm-jj]">
+    </mat-form-field>
+
+    <mat-form-field required appearance="fill" class="half-width">
+        <label>Prix</label>
+        <input name="prix" [(ngModel)]="forfait.prix" #prix="ngModel" required type="number" step=".50" matInput placeholder="Ex. 10.00">
+        <mat-error *ngIf="(prix.dirty || prix.touched) && prix.hasError('required')">Le prix est obligatoire.</mat-error>
+        <span matSuffix>$&nbsp;</span>
+    </mat-form-field>
+
+    <mat-form-field required appearance="fill" class="half-width">
+        <label>Rabais</label>
+        <input name="rabais" [(ngModel)]="forfait.rabais" #prix="ngModel" placeholder="0">
+    </mat-form-field>
+
+    <mat-form-field required appearance="fill" class="half-width">
+        <label>vedette</label>
+        <input name="rabais" [(ngModel)]="forfait.rabais" #vedette="ngModel" placeholder="si vedette mettez 1 et 0 sinon">
+    </mat-form-field>
+    
+    <button matSuffix type="submit"  mat-raised-button (click)="onCancel()">Annuler</button>&nbsp; 
+    <button matSuffix type="submit"  mat-raised-button [disabled]="!forfaitForm.form.valid" (click)="onSave(forfaitForm)">ok</button>  
+
+</form>

@@ -1,0 +1,15 @@
+.flex-container{
+  background-image: url(../imagedoc/image5.jpg);
+    width: 16rem;
+    height: 10rem;
+    border-radius: 2rem;
+    margin-left: 3rem; 
+    padding-left: 2rem;
+    padding-top: 1rem;
+    color: yellow;
+ }
+ .textpos{
+   text-align: left;
+ }
+  
+  
